@@ -4,10 +4,10 @@ const sequelize = require('./index');
 const Cat = sequelize.define('Cat', {
   name: DataTypes.STRING,
   breed: DataTypes.STRING,
-  imgUrl: DataTypes.STRING
+  imgUrl: DataTypes.STRING,
+  likes: DataTypes.NUMBER
 });
 
 sequelize.sync();
-// User.sync({ force: true }) // reset the User table
 
 module.exports = Cat;
